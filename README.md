@@ -121,6 +121,16 @@ unattended run, so the booking flow layers several independent strategies:
 - A crash anywhere in the pipeline is caught, logged with a full traceback, and still
   triggers a notification, so an unattended run never fails silently.
 
+## Development approach
+
+Built collaboratively with Claude Code. I performed all live reconnaissance against the
+real system — capturing and analyzing network traffic to reverse-engineer the
+undocumented booking flow — and directed the overall architecture. Claude Code handled
+implementation once behavior was verified, and its own inferences were cross-checked
+against live captures at each stage: for example, it correctly predicted the booking
+submission's payload structure from an earlier response alone, which was later confirmed
+against a real, successful booking.
+
 ## Running it
 
 ```bash
